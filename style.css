@@ -1,0 +1,23 @@
+body {
+    font-family: sans-serif;
+    height: 5000px;
+}
+
+.bg {
+    background-image: url("./img/bg.png");
+    height: 32vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.navbar-transparent {
+    background-color: transparent !important;
+    transition: background-color 0.5s ease;
+}
+
+.navbar-scroll {
+    background-color: #ffffff !important;
+    transition: background-color 0.5s ease;
+}
