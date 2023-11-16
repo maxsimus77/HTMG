@@ -4,14 +4,38 @@ body {
 }
 
 .bg {
-    background-image: url("./img/bg.png");
+    position: relative;
+    background-image: url("/img/bg.png");
     height: 32vh;
     width: 100%;
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
     color: #ffffff;
+    text-align: center;
 }
 
+.bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bg .container {
+    position: relative;
+    z-index: 1; /* Đặt z-index để đưa phần nội dung lên trên */
+}
+
+.hedtext {
+    position: relative;
+    z-index: 2; /* Đặt z-index để đưa phần chữ lên trên */
+}
 .navbar-transparent {
     background-color: transparent !important;
     transition: background-color 0.5s ease;
@@ -20,4 +44,16 @@ body {
 .navbar-scroll {
     background-color: #ffffff !important;
     transition: background-color 0.5s ease;
+}
+
+.hedtext {
+    color: #ffffff !important; /* Màu chữ mặc định là trắng */
+}
+
+.navbar-scroll .hedtext {
+    color: #000000 !important;
+}
+
+.box-selection{
+    height: 800px;
 }
