@@ -31,42 +31,142 @@
         <div class="container">
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-4 mb-4">
-                    <div class="card text-center">
-                        <img src="" alt="" class="img-fluid" width="150" height="150">
-                        <span>Game là gì?</span>
-                    </div>
+                    <a class="text-decoration-none" href="javascript:void(0);" onclick="scrollToElement('concept')">
+                        <div class="card text-center">
+                            <img src="/img/img1.jpg" alt="" class="img-fluid" width="150" height="150">
+                            <span>Game là gì?</span>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card text-center">
-                        <img src="" alt="" class="img-fluid" width="150" height="150">
-                        <span>Các bước để tạo ra một tựa game đơn giản</span>
-                    </div>
+                    <a class="text-decoration-none" href="javascript:void(0);" onclick="scrollToElement('step')">
+                        <div class="card text-center">
+                            <img src="/img/img2.png" alt="" class="img-fluid" width="150" height="150">
+                            <span>Các bước để tạo ra một tựa game đơn giản</span>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card text-center">
-                        <img src="" alt="" class="img-fluid" width="150" height="150">
-                        <span>Cách để quảng bá game</span>
-                    </div>
+                    <a class="text-decoration-none" href="javascript:void(0);" onclick="scrollToElement('ads')">
+                        <div class="card text-center">
+                            <img src="/img/img3.jpg" alt="" class="img-fluid" width="150" height="150">
+                            <span>Cách để quảng bá game</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="d-flex align-items-center border-top border-bottom">
-        <span>Game là gì?</span>
-        <div>
-            <span>Lịch sử</span>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem ut possimus dicta debitis veniam assumenda rerum, autem unde doloremque ad dolore obcaecati totam quibusdam nisi veritatis praesentium impedit dolores qui?</p>
-        </div>
-        <div>
-            <span>Khái niệm</span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium optio quos, minus incidunt omnis laudantium adipisci repudiandae veritatis perspiciatis cupiditate voluptatibus vitae consequatur, voluptate, animi amet molestiae ea aliquid corporis?</p>
+    <div id="concept" class="concept d-flex align-items-center border-top border-bottom">
+        <div class="title-concept text-white">Game là gì?</div>
+        <div class="content-concept text-white">
+            <div>
+                <span class="fw-bold text-warning">Lịch sử</span>
+                <li>Xuất hiện từ những năm 1940-1950, trò chơi điện tử bắt đầu với máy tính và hệ thống điện tử đầu tiên.</li>
+                <li>Năm 1970, các trò chơi đầu tiên như Pong xuất hiện, đánh dấu sự phổ biến của trò chơi arcade.</li>
+                <li>Những năm 1980-1990, Nintendo, Sega đưa ra các hệ máy chơi game gia đình, với nhiều dòng trò chơi kinh điển.</li>
+            </div>
+            <div>
+                <span class="fw-bold text-warning">Khái niệm</span>
+                <li>Game là hình thức giải trí hoặc hoạt động thể thao dựa trên quy tắc, thường bao gồm tương tác và điều khiển nhân vật để đạt được mục tiêu hoặc vượt qua thách thức.</li>
+                <li>Có nhiều định dạng game như video game, trò chơi thẻ, và trò chơi bàn, đồng thời chúng có thể đóng vai trò trong việc giao tiếp và kết nối cộng đồng.</li>
+                </div>
         </div>
     </div>
-    <div class="step d-flex align-items-center border-top border-bottom">
-        <div>
-            
+    <div id="step" class="step d-flex align-items-center border-top border-bottom flex-column">
+        <div class="step-title">Cách bước thực hiện</div>
+        <div class="step-content d-flex flex-column">
+            <div>
+                <span>Chuẩn bị: </span>
+                <ul class="list mt-2">
+                    <li class="w-100">Lên ý tưởng cho game ( có thể bao gồm cốt truyện )</li>
+                    <li class="w-100">Thiết kế nhân vật và bố cảnh</li>
+                    <li class="w-100">Chọn các công cụ/ngôn ngữ để xây dựng game</li>
+                </ul>
+            </div>
+            <div>
+                <span>Xây dựng core game</span>
+                <ul class="list mt-2">
+                    <li class="w-100">Thiết kế bố cục code và xây dựng tài liệu</li>
+                    <li class="w-100">Tiến hành thực hiện các chức năng quan trọng</li>
+                    <li class="w-100">Tạo những lớp kiểm thử để test ( nếu cần thiết )</li>
+                </ul>
+            </div>
+            <div>
+                <span>Xây dựng các level game</span>
+                <ul class="list mt-2">
+                    <li class="w-100">Tiến hành thêm bố cảnh và nhân vật vào game</li>
+                    <li class="w-100">Tạo các màn chơi cho game phù hợp</li>
+                    <li class="w-100">Kiểm trả lỗi nghiệm trọng và tiến hành sửa</li>
+                </ul>
+            </div>
+            <div>
+                <span>Public game</span> 
+                <ul class="list mt-2">
+                    <li class="w-100">Kiểm thử lại lần cuối</li>
+                    <li class="w-100">Chọn nền tảng upload game</li>
+                    <li class="w-100">Tiến hành quảng cáo hoặc chia sẽ với mọi người</li>
+                </ul>
+            </div>
         </div>
     </div>
+    <div id="ads" class="ads d-flex align-items-center border-top border-bottom">
+        <div class="title-ads text-white">Cách để quảng bá game</div>
+        <div class="content-ads">
+            <div class="c1">
+                <span class="fw-bold text-warning">Cách 1: </span>
+                <li class="text-white">Thuê các dịch vụ bên thứ 3 để quảng cáo game</li>
+            </div>
+            <div class="c2">
+                <span class="fw-bold text-warning">Cách 2: </span>
+                <li class="text-white">Tự upload game lên các nền tảng lớn như: Apps Store, Google Play, Steam, Epic Games</li>
+            </div>
+            <div class="c3">
+                <span class="fw-bold text-warning">Cách 3: </span>
+                <li class="text-white">Tham gia các nền tảng bệ phóng ( có thể kèm theo cả gọi vốn )</li>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="infofooter d-flex">
+            <div class="social">
+                <div class="logo">
+                    <img src="/img/icon.png" alt="" class="icon">
+                    <span>Code có gì hay</span>
+                </div>
+                <hr>
+                <div class="social-media-logos mt-3">
+                    <a class="text-decoration-none" href="https://www.youtube.com/@Codecogihay" target="_blank">
+                        <img src="/img/ytb.png" alt="" class="icon">
+                    </a>
+                    <a class="text-decoration-none" href="https://discord.gg/Codecogihay" target="_blank">
+                        <img src="/img/discord.png" alt="" class="icon">
+                    </a>
+                </div>
+            </div>
+            <div class="overview">
+                <hr>
+                <ul>
+                    <li><a class="text-decoration-none" href="#">Giới thiệu</a></li>
+                    <li><a class="text-decoration-none" href="#">Liên hệ</a></li>
+                    <li><a class="text-decoration-none" href="#">Điều khoản</a></li>
+                </ul>
+            </div>
+            <div class="line">
+                <hr>
+                <ul>
+                    <li><a class="text-decoration-none" href="#">Game là gì?</a></li>
+                    <li><a class="text-decoration-none" href="#">Các bước làm một tựa game đơn giản</a></li>
+                    <li><a class="text-decoration-none" href="#">Cách để quảng bá game</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="under d-flex">
+            <span>Copyright © 2023 D23CNTT04, Inc. All Rights Reserved.</span>
+            <span>Built with ❤️ all over the TDMU</span>
+        </div>
+    </footer>
+    <button id="scrollToTopBtn" class="btn-scroll-top" onclick="scrollToTop()">↑</button>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    height: 5000px;
+    height: 100%;
 }
 
 .bg {
@@ -29,12 +29,36 @@ body {
 
 .bg .container {
     position: relative;
-    z-index: 1; /* Đặt z-index để đưa phần nội dung lên trên */
+    z-index: 1; 
+}
+
+.box-selection {
+    position: relative;
+    height: 800px;
+    background-image: url("/img/bg1.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: height 0.5s ease; 
+}
+
+.box-selection .row {
+    flex-grow: 1;
+}
+
+.box-selection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .hedtext {
     position: relative;
-    z-index: 2; /* Đặt z-index để đưa phần chữ lên trên */
+    z-index: 2; 
 }
 .navbar-transparent {
     background-color: transparent !important;
@@ -47,13 +71,310 @@ body {
 }
 
 .hedtext {
-    color: #ffffff !important; /* Màu chữ mặc định là trắng */
+    color: #ffffff !important; 
 }
 
 .navbar-scroll .hedtext {
     color: #000000 !important;
 }
 
-.box-selection{
-    height: 800px;
+.card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 400px !important;
+    max-height: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column; 
+}
+
+
+
+.card > img {
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    min-height: 80%; 
+    width: 100%; 
+}
+
+.card > span {
+    max-height: 20%; /* Chiếm 20% chiều cao */
+    width: 100%; /* Chiếm 100% chiều rộng */
+    text-align: center;
+    padding: 10px; /* Thêm padding để cách lề */
+    box-sizing: border-box; /* Đảm bảo padding không tăng kích thước thẻ */
+}
+
+.card:hover {
+    transform: scale(1.1); /* Phóng to 110% khi hover */
+}
+
+/* Optional: Thêm hiệu ứng chuyển động */
+.card:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+    transition: background-color 0.3s ease; /* Hiệu ứng màu nền */
+}
+
+.btn-scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-scroll-top:hover {
+    background-color: #0056b3;
+}
+
+.btn-scroll-top.active {
+    transform: rotate(180deg);
+}
+
+
+.concept {
+    position: relative;
+    height: 950px;
+    background-image: url("/img/img1-transformed.jpeg");
+    background-size: cover;
+    background-position: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.concept::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.concept .text-white {
+    position: relative;
+    z-index: 1; 
+}
+
+.concept .text-white > div {
+    position: relative;
+    z-index: 2; 
+}
+
+.title-concept{
+    font-size: 4vw; /* Sử dụng đơn vị vw cho kích thước chữ */
+    font-weight: 700;
+    margin-bottom: 20px;
+    width: 30%;
+    margin-left: 50px;
+    color: #ffffff;
+}
+
+.content-concept {
+    width: 65%;
+    font-size: 2vw; /* Sử dụng đơn vị vw cho kích thước chữ */
+    font-weight: 400;
+}
+
+.step {
+    position: relative;
+    height: 100vh; /* Sử dụng chiều cao là 100% của viewport height */
+    background-image: url("/img/img2-transformed.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.step::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.step .step-title {
+    position: relative;
+    z-index: 1; 
+}
+
+.step .step-content > div {
+    position: relative;
+    z-index: 2; 
+}
+
+.step-title {
+    font-size: 5vw; /* Sử dụng chiều rộng của viewport để xác định kích thước */
+    font-weight: 600;
+    margin-top: 5vh; /* Sử dụng chiều cao của viewport để xác định margin-top */
+    margin-bottom: 1.5vh; /* Sử dụng chiều cao của viewport để xác định margin-bottom */
+    color: #ffffff;
+}
+
+.step-content {
+    font-size: 1.5vw; /* Sử dụng chiều rộng của viewport để xác định kích thước */
+    font-weight: 400;
+    padding: 5vh; /* Sử dụng chiều cao của viewport để xác định padding */
+    color: #ffffff;
+}
+
+.ads {
+    position: relative;
+    height: 950px;
+    background-image: url("/img/img3-transformed.jpeg");
+    background-size: cover;
+    background-position: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.ads::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ads .title-ads {
+    position: relative;
+    z-index: 1; 
+}
+
+.ads .content-ads > div {
+    position: relative;
+    z-index: 2; 
+}
+
+.title-ads {
+    font-size: 4vw; /* Sử dụng đơn vị vw cho kích thước chữ */
+    font-weight: 700;
+    margin-bottom: 20px;
+    width: 30%;
+    margin-left: 50px;
+    color: #ffffff;
+}
+
+.content-ads {
+    width: 65%;
+    font-size: 2vw; /* Sử dụng đơn vị vw cho kích thước chữ */
+    font-weight: 400;
+}
+
+footer {
+    padding: 50px;
+    background-color: #f8f9fa;
+}
+
+.infofooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-direction: row;
+    border-bottom: #000000 solid 1px;
+}
+
+.under {
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.list {
+    display: flex;
+    list-style: none;
+}
+.list > li {
+    padding: 10px 25px;
+    border: 1px solid white;
+    margin: 0 25px;
+    position: relative;
+    max-width: 32.5rem;
+}
+.list > li:not(:last-child):after {
+    content: '';
+    height: 1px;
+    background: white;
+    width: 50px;
+    position: absolute;
+    right: -50px;
+    top: 50%;
+}
+.list > li:not(:last-child):before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    border-style: solid;
+    border-width: 7px 0 7px 20px;
+    border-color: transparent transparent transparent white;
+    right: -50px;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 696px) {
+    .step-title {
+        font-size: 5vw; /* Sử dụng chiều rộng của viewport để xác định kích thước */
+        font-weight: 450;
+        margin-top: 2vh; /* Sử dụng chiều cao của viewport để xác định margin-top */
+        margin-bottom: 0; /* Sử dụng chiều cao của viewport để xác định margin-bottom */
+        color: #ffffff;
+    }
+    
+    .step-content {
+        font-size: 2.5vw; /* Sử dụng chiều rộng của viewport để xác định kích thước */
+        font-weight: 200;
+        padding: 1vh; /* Sử dụng chiều cao của viewport để xác định padding */
+        color: #ffffff;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        height: 220px !important;
+    }
 }
