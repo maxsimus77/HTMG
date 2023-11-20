@@ -1,5 +1,14 @@
+@font-face {
+    font-family: "CustomFont";
+    src: url("/font/Anton-Regular.ttf") format("truetype");
+}
+
+.customfont {
+    font-family: "CustomFont";
+}
+
 body {
-    font-family: sans-serif;
+    font-family: "CustomFont";
     height: 100%;
 }
 
@@ -71,6 +80,7 @@ body {
 }
 
 .hedtext {
+    font-family: "CustomFont";
     color: #ffffff !important; 
 }
 
@@ -183,6 +193,7 @@ body {
 }
 
 .title-concept{
+    font-family: "CustomFont";
     font-size: 4vw; /* Sử dụng đơn vị vw cho kích thước chữ */
     font-weight: 700;
     margin-bottom: 20px;
@@ -226,7 +237,8 @@ body {
 }
 
 .step-title {
-    font-size: 5vw; /* Sử dụng chiều rộng của viewport để xác định kích thước */
+    font-family: "CustomFont";
+    font-size: 4.5vw; /* Sử dụng chiều rộng của viewport để xác định kích thước */
     font-weight: 600;
     margin-top: 5vh; /* Sử dụng chiều cao của viewport để xác định margin-top */
     margin-bottom: 1.5vh; /* Sử dụng chiều cao của viewport để xác định margin-bottom */
@@ -273,6 +285,7 @@ body {
 }
 
 .title-ads {
+    font-family: "CustomFont";
     font-size: 4vw; /* Sử dụng đơn vị vw cho kích thước chữ */
     font-weight: 700;
     margin-bottom: 20px;
@@ -376,5 +389,11 @@ footer {
 @media (max-width: 768px) {
     .card {
         height: 220px !important;
+    }
+}
+
+@media (max-width: 1366px) {
+    .step-content {
+        padding: 2vh;
     }
 }
